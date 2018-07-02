@@ -3,9 +3,9 @@ def badge_maker(name)
   "Hello, my name is #{name}."
 end
 
-def batch_badge_creator(array)
+def batch_badge_creator(attendees)
   messages = []
-  array.each {|x| messages.push(badge_maker(x))}
+  attendees.each {|x| messages.push(badge_maker(x))}
   messages
 end
 
@@ -13,8 +13,8 @@ def room_assigner(name, number)
   "Hello, #{name}! You'll be assigned to room #{number}!"
 end
 
-def assign_rooms(array)
+def assign_rooms(attendees)
   rooms = []
-  array.each_with_index {|y, z| rooms.push(room_assigner(y, z + 1))}
+  attendees.each_with_index {|y, z| rooms.push(room_assigner(y, z + 1))}
   rooms
 end
