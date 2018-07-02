@@ -15,6 +15,6 @@ end
 
 def assign_rooms(array)
   rooms = []
-  array.each {|y| rooms.push(room_assigner(y))}
+  array.each_with_index {|y, z| rooms.push(room_assigner(y, z))}
   rooms
 end
