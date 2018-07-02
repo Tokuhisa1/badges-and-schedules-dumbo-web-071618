@@ -18,3 +18,8 @@ def assign_rooms(attendees)
   attendees.each_with_index {|y, z| rooms.push(room_assigner(y, z + 1))}
   rooms
 end
+
+def printer(attendees)
+  batch_badge_creator(attendees)
+  assign_rooms(attendees)
+end
