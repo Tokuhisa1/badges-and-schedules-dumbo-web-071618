@@ -4,4 +4,6 @@ def badge_maker(name)
 end
 
 def batch_badge_creator(array)
+  messages = []
+  array.each {|x| messages.push(badge_maker(x))}
 end
